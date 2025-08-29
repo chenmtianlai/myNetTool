@@ -5,6 +5,8 @@
 //  Created by Frankie on 19/05/2025.
 //
 
+import UIKit
+
 
 //  AAA_keyNameModel_BBB.swift
 //  Viddi
@@ -12,11 +14,7 @@
 //  Created by Frankie on 2024/3/27.
 //
 
-#if canImport(UIKit)
 import UIKit
-#elseif canImport(AppKit)
-import AppKit
-#endif
 
 //STARTMARK
 nonisolated(unsafe) var kkk_test_lll = true
@@ -48,6 +46,9 @@ let kkk_contentStr_lll = "YYY_content_YYY"
 let kkk_LabelHttpReqRowsLabel_lll = "YYY_rows_YYY"
 let kkk_float_amountStr_lll = "YYY_float_amount_YYY"
 let kkk_posStr_lll = "YYY_pos_YYY"
+let kkk_levelStr_lll = "YYY_level_YYY"
+let kkk_idStr_lll = "YYY_id_YYY"
+let kkk_reviewStr_lll = "YYY_review_YYY"
 
 
 
@@ -76,6 +77,9 @@ let kkk_contentStr_lll = "content"
 let kkk_LabelHttpReqRowsLabel_lll = "rows"
 let kkk_float_amountStr_lll = "float_amount"
 let kkk_posStr_lll = "pos"
+let kkk_levelStr_lll = "level"
+let kkk_idStr_lll = "id"
+let kkk_reviewStr_lll = "review"
 
 #endif
 

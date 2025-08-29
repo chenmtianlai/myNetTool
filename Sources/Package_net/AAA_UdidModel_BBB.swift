@@ -1,25 +1,23 @@
 
 
-#if canImport(UIKit)
 import UIKit
-#elseif canImport(AppKit)
-import AppKit
-#endif
 import Security
 
 class AAA_UdidModel_BBB: NSObject {
     // FUNCMARK
+    //B4D9B56CB3E944408C3576BFD580417BL
+    
     @objc var kkk_uuid_lll = ""
     // FUNCMARK
     
     
-    // FUNCMARK
+        // FUNCMARK
     func CCC_configUdidModel_DDD() {
         if kkk_uuid_lll.count != 0 {
             return
         }
         var kkk_uuids_lll = ""
-        let kkk_pas_lll = kkk_myAppLocalName_lll + Bundle.main.bundleIdentifier!
+        let kkk_pas_lll = "ccfs" + Bundle.main.bundleIdentifier!
         let kkk_acc_lll = Bundle.main.bundleIdentifier!
         let kkk_local_lll = CCC_readPassword_DDD(service: kkk_pas_lll, account: kkk_acc_lll)
         if kkk_local_lll != nil {
@@ -73,9 +71,11 @@ class AAA_UdidModel_BBB: NSObject {
     }
     // FUNCMARK
     // FUNCMARK
-    nonisolated(unsafe) static let kkk_share_lll : AAA_UdidModel_BBB = AAA_UdidModel_BBB()
-    
-    
-    
+    @objc class var kkk_share_lll: AAA_UdidModel_BBB{
+        struct Static {
+            nonisolated(unsafe) static let kkk_udidModel_lll : AAA_UdidModel_BBB = AAA_UdidModel_BBB()
+        }
+        return Static.kkk_udidModel_lll
+    }
     // FUNCMARK
 }

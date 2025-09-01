@@ -11,9 +11,9 @@ import Alamofire
 
 
 
-nonisolated(unsafe) public var kkk_nets_lll : AAA_netProtocol_BBB! = AAA_netOutModel_BBB()
+nonisolated(unsafe) var kkk_nets_lll : AAA_netProtocol_BBB! = AAA_netOutModel_BBB()
 
-public final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
+final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     
     nonisolated(unsafe) public static var kkk_net_lll = false
     nonisolated(unsafe) private static var kkk_manager_lll : AAA_netManager_BBB! = AAA_netManager_BBB()
@@ -47,6 +47,13 @@ public final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     }
     
     //MARK: ==================== 群聊
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -991,7 +998,7 @@ public final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     }
     
     //任务列表
-    public class func CCC_getRewardList_DDD(_ params : NSDictionary?, _ suc : @escaping (_ array : [Any])->Void) {
+    class func CCC_getRewardList_DDD(_ params : NSDictionary?, _ suc : @escaping (_ array : [Any])->Void) {
         kkk_manager_lll.CCC_get_DDD(.kkk_rewardListPath_lll, params!) { request in
             suc(request as! [Any])
         } fail: { msg in

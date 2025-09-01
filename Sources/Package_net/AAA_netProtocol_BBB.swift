@@ -9,10 +9,6 @@ import UIKit
 import Alamofire
 
 // 3. 提供便捷访问入口
-public enum NetworkingCore {}
-public extension NetworkingCore {
-    nonisolated(unsafe) static let shared: AAA_netProtocol_BBB = AAA_netOutModel_BBB()
-}
 public protocol AAA_netProtocol_BBB {
     
     

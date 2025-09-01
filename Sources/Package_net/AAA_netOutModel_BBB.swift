@@ -13,7 +13,7 @@ import Alamofire
 
 nonisolated(unsafe) var kkk_nets_lll : AAA_netProtocol_BBB! = AAA_netOutModel_BBB()
 
-nonisolated(unsafe) let kkk_server_lll: AAA_netProtocol_BBB = AAA_netOutModel_BBB()
+nonisolated(unsafe) public let kkk_server_lll: AAA_netProtocol_BBB = AAA_netOutModel_BBB()
 
 final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     

@@ -8,9 +8,14 @@
 import UIKit
 import Alamofire
 
-// 3. 提供便捷访问入口
+nonisolated(unsafe) public let kkk_server_lll: AAA_netProtocol_BBB = AAA_netOutModel_BBB()
+
+
 public protocol AAA_netProtocol_BBB {
     
+    
+    func CCC_getNetState_DDD() -> Bool
+    func CCC_setNetState_DDD(_ bool : Bool)
     
     func CCC_setToken_DDD(_ token : String)
     //环境变量配置

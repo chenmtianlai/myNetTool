@@ -11,14 +11,20 @@ import Alamofire
 
 
 
-nonisolated(unsafe) var kkk_nets_lll : AAA_netProtocol_BBB! = AAA_netOutModel_BBB()
 
-nonisolated(unsafe) public let kkk_server_lll: AAA_netProtocol_BBB = AAA_netOutModel_BBB()
 
 final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     
-    nonisolated(unsafe) public static var kkk_net_lll = false
+    nonisolated(unsafe) var kkk_net_lll = false
     nonisolated(unsafe) var kkk_manager_lll : AAA_netManager_BBB! = AAA_netManager_BBB()
+    
+    //获取当前网络状态
+    func CCC_getNetState_DDD() -> Bool {
+        return kkk_net_lll
+    }
+    func CCC_setNetState_DDD(_ bool : Bool) {
+        kkk_net_lll = bool
+    }
     
     //设置token
     func CCC_setToken_DDD(_ token : String) {

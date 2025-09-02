@@ -370,10 +370,10 @@ extension AAA_netManager_BBB {
     }
     func CCC_netState_DDD(suc:@escaping ()->Void, fail:@escaping ()->Void) {
         CCC_netSta_DDD {
-            AAA_netOutModel_BBB.kkk_net_lll = true
+            kkk_server_lll.CCC_setNetState_DDD(true)
             suc()
         } fail: {
-            AAA_netOutModel_BBB.kkk_net_lll = false
+            kkk_server_lll.CCC_setNetState_DDD(false)
             fail()
         }
     }

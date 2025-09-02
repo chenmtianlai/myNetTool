@@ -17,7 +17,7 @@ nonisolated(unsafe) public let kkk_server_lll: AAA_netProtocol_BBB = AAA_netOutM
 
 final class AAA_netOutModel_BBB: AAA_netProtocol_BBB {
     
-    nonisolated(unsafe) static var kkk_net_lll = false
+    nonisolated(unsafe) public static var kkk_net_lll = false
     nonisolated(unsafe) var kkk_manager_lll : AAA_netManager_BBB! = AAA_netManager_BBB()
     
     //设置token

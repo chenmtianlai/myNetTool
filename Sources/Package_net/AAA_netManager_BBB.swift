@@ -79,29 +79,33 @@ extension AAA_netManager_BBB {
         kkk_request_lll.responseData { response in
             switch response.result {
             case let .success(data):
-                do {
-                    let kkk_json_lll = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                    let kkk_dic_lll = kkk_json_lll as! Dictionary<String, Any>
-                    if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 0 {
-                        suc(kkk_dic_lll[kkk_apiData_lll] as Any)
-                    }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 1 {
-                        fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
-                    }else if (kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 2 || kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 4) {
-                        AAA_netOutModel_BBB.CCC_postLogoutNoty_DDD()
-                        fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
-                    }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 3 && url != .kkk_walletExchangePath_lll {
-                        AAA_netOutModel_BBB.CCC_showRechargeNoty_DDD()
+                DispatchQueue.main.async {
+                    do {
+                        let kkk_json_lll = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                        let kkk_dic_lll = kkk_json_lll as! Dictionary<String, Any>
+                        if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 0 {
+                            suc(kkk_dic_lll[kkk_apiData_lll] as Any)
+                        }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 1 {
+                            fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
+                        }else if (kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 2 || kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 4) {
+                            AAA_netOutModel_BBB.CCC_postLogoutNoty_DDD()
+                            fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
+                        }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 3 && url != .kkk_walletExchangePath_lll {
+                            AAA_netOutModel_BBB.CCC_showRechargeNoty_DDD()
+                            fail("")
+                        }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 10 {
+                            fail(((kkk_dic_lll as [String : Any]).CCC_toJson_DDD()))
+                        }else{
+                            fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
+                        }
+                    } catch _ {
                         fail("")
-                    }else if kkk_dic_lll[kkk_LabelHttpReqCodeLabel_lll] as! Int == 10 {
-                        fail(((kkk_dic_lll as [String : Any]).CCC_toJson_DDD()))
-                    }else{
-                        fail(kkk_dic_lll[kkk_msgStr_lll] as! String)
                     }
-                } catch _ {
-                    fail("")
                 }
             case .failure(_):
-                fail("")
+                DispatchQueue.main.async {
+                    fail("")
+                }
             }
         }
         return kkk_request_lll
